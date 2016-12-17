@@ -1,0 +1,4 @@
+1、先获取请求路径中的部分pathname
+2、去掉多余的斜杠“/”：pathname = pathname.replace(/\//,'');//替换掉前面的/
+3、编写地址对应的方法
+4、调用对应函数：router[pathname](request,response);
