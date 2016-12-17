@@ -12,7 +12,7 @@ module.exports={
 			if(error){
 				console.log(error);
 			}else{
-				console.log(data.toString());
+				console.log("文件读取成功");
 				recall(data);
 			}
 		});
