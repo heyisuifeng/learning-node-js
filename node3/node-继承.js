@@ -6,10 +6,6 @@ http.createServer(function(request,response){
 		teacher=new Teacher(1,"node",25);
 		teacher.teach(response);
 		teacher.play(response);
-		console.log("teacher id is "+teacher.id);
-		console.log("teacher name is "+teacher.name);
-		console.log("teacher age is "+teacher.age);
-		console.log("teacher class have a function: "+teacher.teach);
 		response.end('');
 	}
 }).listen(8000);
