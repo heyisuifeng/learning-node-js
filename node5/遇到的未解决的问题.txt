@@ -1,0 +1,41 @@
+在node5-路由文件结合中遇到了一个奇葩问题，暂时不到怎么解决，先留着看后面的教程有说吗？(网上没有找到)
+
+问题描述：
+var http = require('http');
+var url = require('url');
+var rout = require('./rout/rout');
+http.createServer(function(request,response){
+	response.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
+	if(request.url!=="/favicon.ico"){
+		var pathname=url.parse(request.url).pathname;
+		pathname = pathname.replace(/\//,'');//替换掉前面的/
+		console.log(pathname);
+		rout[pathname](request,response);//----------------------------问题点
+	}
+}).listen(8080);
+console.log("Server running 8080");
+
+
+在上面的代码问题点出，当我访问的路径为localhost:8080/login时，即pathname为login，根据以下路由代码
+var optfile = require('../optfile/optfile.js');
+module.exports={
+	login:function(request,response){
+		function recall(data){
+			response.write(data);
+			response.end('');
+		}
+		optfile.readfile('./views/login.html',recall);
+	},
+	
+	register:function(request,response){
+		function recall(data){
+			response.write(data);
+			response.end('');
+		}
+		optfile.readfile('./views/register.html',recall);
+	}
+}
+
+请求会被转去读取login.html文件
+
+此时如果login.html文件的内容为login1.html时，程序会正常运行，但是当内容为login2.html(内容其实为jsp，当时好奇会不会正常返回随便从以前的项目中copy过来的)，就会图1的错误。图2为当login.html只有一行文字login时的正常情况。
