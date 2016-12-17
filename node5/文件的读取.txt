@@ -1,0 +1,6 @@
+node.js文件读取包括同步读取和异步读取
+
+1、fs为node.js自带的操作文件的类
+2、路径需要注意：optfile.readfileSync('./views/login.html');
+3、异步读取时，如果传了response，那么就可能报错，因为response已经end了，用闭包
+解决
