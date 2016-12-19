@@ -1,0 +1,5 @@
+1、例子新闻，先从数据库中将新闻内容读出来，然后将对应的内容写入磁盘对应的html文件，
+最后生成超链接，这种方式叫页面静态化
+
+需要注意的点：optfile.writeFile("./views/writefile.txt","第六章文件的写入",recall);
+路径中views文件夹需要手动创建，而writefile.txt是自动创建的
