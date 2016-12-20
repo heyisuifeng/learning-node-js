@@ -1,0 +1,6 @@
+读取图片是以二进制的形式读取和向前台发送的，在此过程中response不能发送任何的字符串或者
+其他信息，否者会破坏图片字节流。
+
+response.writeHead(200,{'Content-Type':'image/jpeg'});二进制流方式输出
+
+fs.readFile(path,'binary',function(error,file){}
