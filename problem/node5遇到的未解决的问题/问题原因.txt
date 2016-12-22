@@ -1,0 +1,6 @@
+图片读取是会在发送一次请求，但是路由并没有想要的请求方法，所以报错。次要原因
+根本原因：response.writeHead()的不同设置
+输出文本内容时为：response.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
+输出图片内容时为：response.writeHead(200,{'Content-Type':'image/jpeg'});
+
+决解办法参考node8
