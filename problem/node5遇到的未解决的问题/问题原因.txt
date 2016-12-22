@@ -1,6 +1,6 @@
-Í¼Æ¬¶ÁÈ¡ÊÇ»áÔÚ·¢ËÍÒ»´ÎÇëÇó£¬µ«ÊÇÂ·ÓÉ²¢Ã»ÓĞÏëÒªµÄÇëÇó·½·¨£¬ËùÒÔ±¨´í¡£´ÎÒªÔ­Òò
-¸ù±¾Ô­Òò£ºresponse.writeHead()µÄ²»Í¬ÉèÖÃ
-Êä³öÎÄ±¾ÄÚÈİÊ±Îª£ºresponse.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
-Êä³öÍ¼Æ¬ÄÚÈİÊ±Îª£ºresponse.writeHead(200,{'Content-Type':'image/jpeg'});
+ï»¿å›¾ç‰‡è¯»å–æ˜¯ä¼šåœ¨å‘é€ä¸€æ¬¡è¯·æ±‚ï¼Œä½†æ˜¯è·¯ç”±å¹¶æ²¡æœ‰æƒ³è¦çš„è¯·æ±‚æ–¹æ³•ï¼Œæ‰€ä»¥æŠ¥é”™ã€‚æ¬¡è¦åŸå› 
+æ ¹æœ¬åŸå› ï¼šresponse.writeHead()çš„ä¸åŒè®¾ç½®
+è¾“å‡ºæ–‡æœ¬å†…å®¹æ—¶ä¸ºï¼šresponse.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
+è¾“å‡ºå›¾ç‰‡å†…å®¹æ—¶ä¸ºï¼šresponse.writeHead(200,{'Content-Type':'image/jpeg'});
 
-¾ö½â°ì·¨²Î¿¼node8
+å†³è§£åŠæ³•å‚è€ƒnode8
